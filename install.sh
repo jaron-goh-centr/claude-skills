@@ -20,7 +20,7 @@ TARGET="${HOME}/.claude/skills"
 # If run via curl | bash, BASH_SOURCE[0] is empty — clone to tmp
 if [[ "$SCRIPT_DIR" == "/" || ! -d "$SCRIPT_DIR/.git" && ! -f "$SCRIPT_DIR/install.sh" ]]; then
   TMP="$(mktemp -d)"
-  git clone https://github.com/jarongoh/claude-skills "$TMP"
+  git clone https://github.com/jaron-goh-centr/claude-skills "$TMP"
   SCRIPT_DIR="$TMP"
 fi
 

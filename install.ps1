@@ -15,7 +15,7 @@ if (-not $ScriptDir) {
     # Running via irm | iex — clone to temp
     $TempDir = Join-Path $env:TEMP "claude-skills-install"
     if (Test-Path $TempDir) { Remove-Item $TempDir -Recurse -Force }
-    git clone https://github.com/jarongoh/claude-skills $TempDir
+    git clone https://github.com/jaron-goh-centr/claude-skills $TempDir
     $ScriptDir = $TempDir
 }
 

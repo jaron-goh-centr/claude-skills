@@ -6,7 +6,7 @@
 
 **Windows (PowerShell):**
 ```powershell
-git clone https://github.com/jarongoh/claude-skills
+git clone https://github.com/jaron-goh-centr/claude-skills
 cd claude-skills
 .\install.ps1
 ```
@@ -18,7 +18,7 @@ Force-overwrite existing skills:
 
 **macOS / Linux:**
 ```bash
-git clone https://github.com/jarongoh/claude-skills
+git clone https://github.com/jaron-goh-centr/claude-skills
 cd claude-skills
 bash install.sh
 ```
