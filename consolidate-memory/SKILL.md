@@ -1,5 +1,5 @@
 ---
-name: consolidating-memory
+name: consolidate-memory
 description: Reads the past 24hrs of conversation logs from ~/.claude/history.jsonl, extracts key decisions, preferences, and facts, updates recent-memory.md and long-term-memory.md accordingly. Promotes important patterns from recent to long-term. Use when triggered by nightly cron or when user asks to "consolidate memory", "update memory", or "sync memory".
 ---
 

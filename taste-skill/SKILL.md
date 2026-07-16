@@ -1,5 +1,5 @@
 ---
-name: design-taste-frontend
+name: taste-skill
 description: Anti-slop frontend skill for landing pages, portfolios, and redesigns. The agent reads the brief, infers the right design direction, and ships interfaces that do not look templated. Real design systems when applicable, audit-first on redesigns, strict pre-flight check.
 ---
 
@@ -229,8 +229,10 @@ LLMs default to clichés. Override these defaults proactively. Each rule has a c
 
 ### 4.4 Materiality, Shadows, Cards
 * Use cards ONLY when elevation communicates real hierarchy. Otherwise group with `border-t`, `divide-y`, or negative space.
-* When a shadow is used, tint it to the background hue. No pure-black drop shadows on light backgrounds.
+* **NO container sprawl.** Do not wrap every element in a bordered, rounded card by default. Typography, negative space, and layout do the separating; reach for a card only when there is real elevation to communicate.
+* When a shadow is used, tint it to the background hue. No pure-black drop shadows on light backgrounds. Prefer multi-layered, ultra-subtle shadows (a soft ambient layer + a tight contact layer) over one flat heavy drop shadow; if the brand is brutalist, use a hard border instead of a shadow.
 * For `VISUAL_DENSITY > 7`: generic card containers are banned. Data metrics breathe in plain layout.
+* **NO numbered feature/service cards** (`01`, `02`, `03` overlaid on generic cards) unless the content is a genuinely sequential process, chronological funnel, or step-by-step flow. Three unordered feature cards do not need numbers.
 * **SHAPE CONSISTENCY LOCK (mandatory):** Pick ONE corner-radius scale for the page and stick to it. Options: all-sharp (radius 0), all-soft (radius 12-16px), all-pill (full radius for interactive). Mixed systems are allowed only when there is a documented rule (e.g. "buttons are full-pill, cards are 16px, inputs are 8px") and that rule is followed everywhere. Round buttons in a square layout, or square cards on a pill-button page, is broken design.
 
 ### 4.5 Interactive UI States
@@ -634,7 +636,7 @@ Avoid these signatures unless the brief explicitly asks for them.
 * **NO generic avatars.** No SVG "egg" or Lucide user icons → use believable photo placeholders or specific styling.
 * **NO fake-perfect numbers.** Avoid `99.99%`, `50%`, `1234567`. Use organic, messy data (`47.2%`, `+1 (312) 847-1928`).
 * **NO startup-slop brand names.** "Acme", "Nexus", "SmartFlow", "Cloudly" → invent contextual, premium names that sound real.
-* **NO filler verbs.** "Elevate", "Seamless", "Unleash", "Next-Gen", "Revolutionize" → concrete verbs only.
+* **NO filler verbs.** "Elevate", "Seamless" / "Seamlessly", "Unleash" / "Unlock", "Next-Gen" / "Next-level" / "Next-generation", "Revolutionize", "Supercharge", "Leverage", "Dive In", "Tapestry" → concrete verbs only.
 
 ### 9.E External Resources & Components
 * **NO hand-rolled SVG icons.** Use Phosphor / HugeIcons / Radix / Tabler. Lucide on explicit request only.
@@ -698,6 +700,28 @@ These patterns came out of real LLM-generated landing-page tests. They are the s
 * **Locale / city-name / time / weather strips are banned for 99% of briefs.** "Lisbon, working with founders" in the hero, "1200-690 Lisbon, Portugal" in the footer, "Lisbon 14:23 · 18°C" in the nav. These are agency-portfolio decoration tells. Allowed ONLY when: the brief explicitly describes a globally-distributed studio with timezone-relevant work, OR a travel-focused brand, OR a real-world physical venue. A single contact-address mention in the footer is fine; an atmospheric locale strip is not.
 * **Scroll cues are banned.** `Scroll`, `↓ scroll`, `Scroll to explore`, `Scroll to walk through it`, animated mouse-wheel icons. If the user has not scrolled yet, they are looking at the hero. They know what scroll is. The bottom of the viewport does not need a label.
 * **ZERO decorative status dots by default.** A coloured dot before nav items, before list rows, before badges, before status labels is a Tell. Only acceptable when conveying real semantic state (a live indicator on actual server status, a live availability flag) and limited to one per page section.
+
+### 9.G2 Icons, Charts, Badges & Copy Discipline (merged from anti-slop-skill.md)
+
+**Icons as graphics**
+* **NO scaling a utility icon into a hero graphic.** Icons are for utility, max `32px`. Do not blow up a generic Phosphor/Radix/Tabler line icon to `128px` to serve as a decorative hero illustration. If a large graphic is needed, use a custom abstract shape, a real image, or a UI snippet instead.
+
+**Charts & data visuals**
+* **NO generic gradient charts.** Charts must represent realistic data scales and grouping. Do not paint a sweeping linear gradient behind disconnected or unrelated metric call-outs just to look "data-rich."
+
+**Decorative pills & badges**
+* **Pills, badges, and status indicators must be tied to real, dynamic, actionable data** (`Status: Active`, `14 Errors`, an actual live count). Never use them as pure decorative flair with no underlying state (this generalizes the existing "no pills on images" rule in 9.F to pills/badges anywhere on the page).
+
+**Redundant / obvious labeling**
+* **NO labeling things the user can already see.** Don't put a `LOGO` tag on the logo, a `HERO` tag on the hero section, or similar self-evident micro-labels. Don't restate the same identity (name, edition, location) in multiple places on the page.
+
+**Subtitle discipline (beyond the hero)**
+* **Max ONE subtitle per heading block, anywhere on the page** — not just the hero (see Section 4.7's hero stack cap for the hero-specific version). One headline, one supporting line. Force conciseness in hierarchy rather than stacking a headline + eyebrow + subtitle + tagline.
+
+**Show, don't tell**
+* **ACTIONABLE COPY RULE:** prefer showing over telling. Instead of an abstract icon plus a paragraph explaining a feature, render a snippet of the actual UI, a realistic code block, or a real data table that demonstrates the feature directly.
+
+**Concrete banned "data exhaust" examples** (extends the metadata/eyebrow bans already in 9.F above): invented GPS coordinates (`47.6062°N`), fake timestamps/dates, volume/issue/edition tags (`VOL. 04`, `ISSUE 02`), reading-time labels (`READING: 41 MIN`), page/item counts (`248 PAGES`), source counts (`LIVE · 11 SOURCES`), plate/figure/signature indices (`PLATE 01`, `00 / SIGNATURE`), and fake file paths. Include any such data only when it is real, functional, and necessary for the user.
 
 ### 9.G EM-DASH BAN (the single most-violated Tell)
 

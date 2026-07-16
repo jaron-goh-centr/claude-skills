@@ -1,6 +1,6 @@
 ---
 name: pp-wikipedia
-description: "Printing Press CLI for Wikipedia. Wikipedia REST API. Get article summaries, search, browse related topics, and access on-this-day events. No..."
+description: "Wikipedia CLI — article summaries, search, related topics, on-this-day events. No API key. Trigger phrases: `look up X on wikipedia`, `wikipedia summary of`, `what does wikipedia say about`, `on this day in history`, `use wikipedia-pp-cli`, `run wikipedia`. Only when Wikipedia is the wanted source — general web research goes to firecrawl or deep-research."
 author: "Hiten Shah"
 license: "Apache-2.0"
 argument-hint: "<command> [args] | install cli|mcp"

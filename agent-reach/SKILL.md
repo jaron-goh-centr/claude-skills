@@ -1,21 +1,22 @@
 ---
 name: agent-reach
 description: >
-  MUST USE when user wants to research/search/look up/find anything on the
-  internet — e.g. "research this topic", "do a deep dive on X", "search the
-  web for X", "see what people say about X", "look this up".
+  Multi-platform internet fetcher. Use ONLY when: (1) task targets a
+  Chinese-ecosystem platform — XiaoHongShu, Bilibili, V2EX, Xueqiu,
+  Xiaoyuzhou Podcast; (2) task targets Twitter/X, Reddit, YouTube
+  transcripts, LinkedIn/jobs, or RSS AND no dedicated skill covers it;
+  (3) user explicitly says "agent-reach" or "use agent reach".
 
-  Also MUST USE when user mentions any platform or shares any URL/link:
-  Twitter/X, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu,
-  Xiaoyuzhou Podcast, LinkedIn/jobs/recruiting, V2EX, Xueqiu (stocks), RSS.
+  NOT for: Hacker News (use pp-hackernews); 30-day community sentiment /
+  trend research (use last30days); deep cited research reports (use
+  deep-research); generic page scraping/crawling (use firecrawl); GitHub
+  URLs or code search during coding tasks (use gh / native tools);
+  writing reports/analysis/translation (this skill only FETCHES);
+  posting/commenting/liking (write operations).
 
   13 platforms, multi-backend routing (OpenCLI / per-platform CLIs / APIs).
-  Zero config for 6 channels. Run `agent-reach doctor --json` to see which
-  backend serves each platform right now.
-
-  NOT for: writing reports/analysis/translation (this skill only FETCHES
-  internet content); posting/commenting/liking (write operations); platforms
-  that already have a dedicated skill installed (prefer that skill).
+  Run `agent-reach doctor --json` to see which backend serves each
+  platform right now.
 metadata:
   openclaw:
     homepage: https://github.com/Panniantong/Agent-Reach

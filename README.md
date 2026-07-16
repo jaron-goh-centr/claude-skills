@@ -50,5 +50,4 @@ git pull && .\install.ps1 -Force
 | `three-brain` | Multi-LLM validation workflow |
 | `agent-loop*` | Iterative agent execution (lite/standard/deep) |
 | `consolidate-memory` | Session memory sync |
-| `lishasui` | Custom language protocol |
 | `ponytail` | Lean shipping discipline |

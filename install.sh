@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # install.sh — Install Jaron's Claude Code skills on macOS / Linux
-# Usage: curl -fsSL https://raw.githubusercontent.com/jarongoh/claude-skills/main/install.sh | bash
+# Usage: curl -fsSL https://raw.githubusercontent.com/jaron-goh-centr/claude-skills/master/install.sh | bash
 # Or:    git clone https://github.com/jarongoh/claude-skills && cd claude-skills && bash install.sh
 
 set -euo pipefail

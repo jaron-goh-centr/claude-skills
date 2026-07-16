@@ -1,5 +1,5 @@
 # install.ps1 — Install Jaron's Claude Code skills on Windows
-# Usage: irm https://raw.githubusercontent.com/jarongoh/claude-skills/main/install.ps1 | iex
+# Usage: irm https://raw.githubusercontent.com/jaron-goh-centr/claude-skills/master/install.ps1 | iex
 # Or:    git clone https://github.com/jarongoh/claude-skills && cd claude-skills && .\install.ps1
 
 param(

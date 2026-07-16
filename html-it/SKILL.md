@@ -1,4 +1,4 @@
-﻿---
+---
 name: html-it
 description: Produce HTML output instead of markdown for any agent task. Four levels — Static Doc, Visual Artifact, Two-Way Interactive, Throwaway Tool. Based on Thariq Shihipar's "Unreasonable Effectiveness of HTML" framework. Triggers on "/html-it", "html-it", "html this", "render as html", "build me an html", "make an html artifact".
 ---
@@ -208,9 +208,6 @@ For triaging N options visually with comments + status + clipboard export. Used 
 7. Live summary line at bottom (accumulates picks)
 8. **Export button** — builds structured directive prompt, copies to clipboard
 
-**Canonical samples:**
-- `C:/ROBO/agents/EDDO/output/hook-workshop-sample.html`
-- `C:/ROBO/agents/EDDO/output/broll-review-html-vs-markdown.html`
 
 ### Recipe — Session Recap (Level 1)
 
@@ -223,7 +220,7 @@ Render the current conversation as a clean static doc. Original `/html-it` use c
 4. **Artifacts** — file paths created/edited, clickable
 5. **Open threads** — anything unresolved
 
-**Save location:** `C:/ROBO/output/html-it/{YYYY-MM-DD_HHMM}_{slug}.html`. If a project is loaded via `coordinate`, also copy to the project folder.
+**Save location:** current project directory if the output belongs to the project, otherwise the session scratchpad directory. Name it `{YYYY-MM-DD_HHMM}_{slug}.html`. Never write to hardcoded paths outside the project.
 
 ### Recipe — Comparison Explainer (Level 2)
 
@@ -240,32 +237,10 @@ For "X vs Y" lessons (Markdown vs HTML, before vs after). Side-by-side panels, i
 
 ## How to invoke
 
-### Inside Robo (Eddo or any agent)
-
 - User says `/html-it`, "html-it", "html this", "render as html", "build me an html for X"
 - Agent picks the level (1-4) based on the task
-- Generates a single `.html` file, saves to the right place, opens with `start ""` on Windows
+- Generates a single `.html` file, saves per the save-location rule above, opens with `start ""` on Windows
 - Confirms the path back to the user
-
-### Community version (share with viewers)
-
-Public mirror at: **[github.com/robonuggets/html-it](https://github.com/robonuggets/html-it)** *(prep — push pending Jay's go)*
-
-Install prompt for users:
-```
-I'm giving you a skill called html-it. Get the files with:
-
-git clone https://github.com/robonuggets/html-it
-
-Follow the README to set it up.
-Recommend how it would best apply to my setup in plain language, and ask me
-a few questions to clarify my intent before installing it.
-```
-
-### Related skills
-
-- **`tweak`** — Inject a live tweak panel into any HTML file (5 or 10 sliders), bake selected values back into source CSS. Pairs with Level 3/4 outputs from `html-it`. Community version: [github.com/robonuggets/skills](https://github.com/robonuggets/skills).
-- **`master-slides`** — for slide-deck HTML specifically (Level 2). Different stylistic system (paper typography + isometric graphics).
 
 ---
 

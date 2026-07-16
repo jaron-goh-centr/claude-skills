@@ -1,6 +1,6 @@
 ---
 name: pp-seats-aero
-description: "Printing Press CLI for Seats Aero. Seats.aero Partner API for award travel availability, cached search, route lists, and trip revalidation details."
+description: "Seats.aero award-travel CLI — points/miles seat availability, cached award search, route lists, trip revalidation. Trigger phrases: `award availability to <city>`, `find business class with points/miles`, `seats aero search`, `use seats-aero`, `run seats-aero`. Award/points bookings only — cash fares and flight tracking go to pp-flight-goat."
 author: "Cathryn Lavery"
 license: "Apache-2.0"
 argument-hint: "<command> [args] | install cli|mcp"

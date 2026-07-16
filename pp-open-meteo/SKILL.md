@@ -1,6 +1,6 @@
 ---
 name: pp-open-meteo
-description: "Every Open-Meteo endpoint family in one CLI — forecast, archive, marine, air quality, flood, climate, ensemble, seasonal, geocoding, elevation. Trigger phrases: `what's the weather in`, `forecast for`, `is it going to rain`, `marine forecast`, `air quality in`, `historical weather`, `climate normal`, `use open-meteo`, `run open-meteo`."
+description: "Open-Meteo specialist-endpoint CLI — marine, flood, climate normals, ensemble, seasonal forecasts, historical archive, elevation, geocoding. Use for those specialist queries (`marine forecast`, `flood risk`, `climate normal for`, `ensemble forecast`, `historical weather archive`, `elevation of`) or when explicitly named: `use open-meteo`, `run open-meteo`. NOT for everyday weather — current conditions, daily forecast, rain, air quality, severe-weather alerts, activity recommendations all go to pp-weather-goat."
 author: "Trevin Chow"
 license: "Apache-2.0"
 argument-hint: "<command> [args] | install cli|mcp"

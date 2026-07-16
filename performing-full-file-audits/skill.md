@@ -1,6 +1,6 @@
 ---
 name: performing-full-file-audits
-description: Performs a comprehensive project workspace review including functional auditing, bloat removal, file consolidation, performance profiling, and security scanning. Covers Next.js/React/TypeScript/Supabase/Tailwind stacks with deep LLM integration auditing. Use when auditing code for quality, performance, cost, or security vulnerabilities.
+description: Performs a comprehensive project workspace review including functional auditing, bloat removal, file consolidation, performance profiling, and security scanning. Covers Next.js/React/TypeScript/Supabase/Tailwind stacks with deep LLM integration auditing. Use when auditing code for quality, performance, cost, or security vulnerabilities — including "polish this project", "production-readiness check", "verify security", "full audit", "code audit", "clean up the workspace". Absorbs the retired auditing-optimizing-securing skill. Includes a mandatory Codex self-review gate (Phase 0.5) when Claude-authored code is in scope. For an adversarial attacker-perspective audit use red-team-security-audit; for over-engineering-only hunts use ponytail-audit.
 ---
 
 # Full File Audit, Bloat Removal, Consolidation and Security Review
@@ -68,6 +68,7 @@ This phase catches entire dead files and unused functions — the highest-value 
 - [ ] **Unused shadcn/ui components:** Components in `components/ui/` never imported by `app/` or other components.
 - [ ] **Dead CSS / Tailwind classes:** Custom `@layer` definitions in `globals.css` never referenced in components. (Note: dynamic class construction like `bg-${color}-500` gets purged at build time — flag these too.)
 - [ ] **Dead environment variables:** `.env.example` keys vs `process.env.*` usage. Flag vars defined but never read.
+- [ ] **TODO/FIXME sweep:** Grep for `@todo`, `TODO`, `FIXME`, `HACK`, `ponytail:` markers — surface as a deferred-work ledger in the report; stale ones (>90 days by git blame) flag for resolution or deletion.
 
 ### Phase 2.5 — Pipeline Integrity Tracing
 > **Why:** Highest-frequency root cause of subtle bugs is a field silently vanishing across request → Zod → service → DB → response → cache → UI layers. Static checks miss this; only end-to-end tracing catches it.

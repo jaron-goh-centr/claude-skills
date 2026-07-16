@@ -1,6 +1,6 @@
 ---
 name: pp-coingecko
-description: "Printing Press CLI for Coingecko. CoinGecko public API for cryptocurrency data. Free tier, no API key required for basic endpoints."
+description: "CoinGecko crypto-data CLI — coin prices, market caps, charts, trending coins, exchange data. Free tier, no API key. Trigger phrases: `price of bitcoin/eth/<coin>`, `crypto market cap`, `trending crypto`, `coin chart for`, `use coingecko`, `run coingecko`. Crypto only — stocks/ETFs/options go to pp-yahoo-finance; prediction markets to pp-kalshi."
 author: "Hiten Shah"
 license: "Apache-2.0"
 argument-hint: "<command> [args] | install cli|mcp"

@@ -1,6 +1,6 @@
 ---
 name: pp-recipe-goat
-description: "Printing Press CLI for Recipe Goat. Recipe GOAT — find the best version of any recipe across 37 trusted sites, with offline cookbook, pantry match,..."
+description: "Cross-site recipe finder — best version of any recipe across 37 trusted sites, offline cookbook, pantry matching, scaling. Trigger phrases: `find the best recipe for X`, `compare recipes for X`, `what can I cook with what I have`, `use recipe-goat`, `run recipe-goat`. Default for general recipe requests; site-specific asks go to pp-allrecipes or pp-food52 when the user names that site."
 author: "Trevin Chow"
 license: "Apache-2.0"
 argument-hint: "<command> [args] | install cli|mcp"
